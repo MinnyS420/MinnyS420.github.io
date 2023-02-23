@@ -6,37 +6,6 @@ let previousOperand = '';
 let currentOperand = '';
 let operation = undefined;
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const buttonValue = button.innerText;
-    if (buttonValue === 'AC') {
-      clear();
-      updateDisplay();
-      return;
-    }
-    if (buttonValue === 'DEL') {
-      deleteNumber();
-      updateDisplay();
-      return;
-    }
-    if (buttonValue === '+' ||
-        buttonValue === '-' ||
-        buttonValue === '*' ||
-        buttonValue === '÷') {
-      handleOperation(buttonValue);
-      updateDisplay();
-      return;
-    }
-    if (buttonValue === '=') {
-      performOperation();
-      updateDisplay();
-      return;
-    }
-    inputNumber(buttonValue);
-    updateDisplay();
-  });
-});
-
 const clear = () => {
   previousOperand = '';
   currentOperand = '';
@@ -89,9 +58,17 @@ const inputNumber = number => {
 
 const updateDisplay = () => {
   currentOperandTextElement.innerText = currentOperand;
-  if (operation != null) {
-    previousOperandTextElement.innerText = `${previousOperand} ${operation}`;
-  } else {
-    previousOperandTextElement.innerText = '';
-  }
+  previousOperandTextElement.innerText = `${previousOperand} ${operation || ''}`;
 };
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const buttonValue = button.innerText;
+    buttonValue === 'AC' ? clear() : null;
+    buttonValue === 'DEL' ? deleteNumber() : null;
+    ['+', '-', '*', '÷'].includes(buttonValue) ? handleOperation(buttonValue) : null;
+    buttonValue === '=' ? performOperation() : null;
+    !isNaN(buttonValue) ? inputNumber(buttonValue) : null;
+    updateDisplay();
+  });
+});
