@@ -17,7 +17,10 @@ const cityHeadline = document.getElementById('cityHeadline');
 const hourlyButton = document.getElementById('hourlyButton');
 const dailyButton = document.getElementById('dailyButton');
 
-async function initializeWeatherApp(local, city = 'Skopje', dailyData) {
+// This function initializes the weather app by fetching data from the OpenWeatherMap API 
+// and setting the city name and weather data in the DOM.
+
+async function initializeWeatherApp(local, city = 'Skopje', dailyData) {  
     city = city.trim()
     if (city.length == 0) city = 'Skopje';
 

@@ -8,6 +8,7 @@ const speciesBtn = document.getElementById("speciesBtn");
 const starshipsBtn = document.getElementById("starshipsBtn");
 const vehiclesBtn = document.getElementById("vehiclesBtn");
 
+//This function fetches data from an endpoint and renders it to the DOM. It also stores the data in sessionStorage to avoid unnecessary requests. When a button is clicked, it fetches more detailed information about the element and displays it in a list.
 async function fetchAndRenderData(endpoint, parentElem) {
   let data = null;
   const storageData = sessionStorage.getItem(endpoint);
