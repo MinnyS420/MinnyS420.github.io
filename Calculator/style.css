@@ -1,4 +1,6 @@
-
+body{
+    background-color: rgba(0, 0, 0, 0.746);
+}
 #calculator {
     width: 240px;
     height: 410px;
