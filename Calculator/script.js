@@ -2,21 +2,26 @@ const buttons = document.querySelectorAll('.button');
 const previousOperandTextElement = document.querySelector('#previous-operand');
 const currentOperandTextElement = document.querySelector('#current-operand');
 
-let previousOperand = '';       // previousOperand - a let variable that stores the previous operand as a string.
-let currentOperand = '';        // currentOperand - a let variable that stores the current operand as a string.
-let operation = undefined;      // operation - a let variable that stores an operation (add, subtract, multiply, divide) as undefined by default
+let previousOperand = '';
+let currentOperand = '';
+let operation = undefined;
 
-const clear = () => {           // clear() - a function to reset all variables to their default values.
+const clear = () => {
   previousOperand = '';
   currentOperand = '';
   operation = undefined;
 };
 
-const deleteNumber = () => {     // deleteNumber() - a function to delete the last number in the current operand.
+const deleteNumber = () => {
   currentOperand = currentOperand.toString().slice(0, -1);
 };
 
-const handleOperation = buttonValue => {      // handleOperation() - a function to set up an operation between two numbers.
+const handleOperation = buttonValue => {
+  if (buttonValue === '.') {
+    inputDecimal();
+    return;
+  }
+
   if (currentOperand === '') return;
   if (previousOperand !== '') {
     performOperation();
@@ -26,7 +31,7 @@ const handleOperation = buttonValue => {      // handleOperation() - a function 
   currentOperand = '';
 };
 
-const performOperation = () => {              // performOperation() - a function to perform an operation between two numbers.
+const performOperation = () => {
   let result;
   const previous = parseFloat(previousOperand);
   const current = parseFloat(currentOperand);
@@ -44,6 +49,9 @@ const performOperation = () => {              // performOperation() - a function
     case '÷':
       result = previous / current;
       break;
+    case '.':
+      result = previous + current;
+      break;
     default:
       return;
   }
@@ -52,11 +60,16 @@ const performOperation = () => {              // performOperation() - a function
   previousOperand = '';
 };
 
-const inputNumber = number => {           // inputNumber() -a function to add numbers to the current operand.
+const inputNumber = number => {
   currentOperand = currentOperand.toString() + number.toString();
 };
 
-const updateDisplay = () => {             // updateDisplay() -a function to update what is displayed on screen.
+const inputDecimal = () => {
+  if (currentOperand.includes('.')) return;
+  currentOperand = currentOperand.toString() + '.';
+};
+
+const updateDisplay = () => {
   currentOperandTextElement.innerText = currentOperand;
   previousOperandTextElement.innerText = `${previousOperand} ${operation || ''}`;
 };
@@ -66,7 +79,7 @@ buttons.forEach(button => {
     const buttonValue = button.innerText;
     buttonValue === 'AC' ? clear() : null;
     buttonValue === 'DEL' ? deleteNumber() : null;
-    ['+', '-', '*', '÷'].includes(buttonValue) ? handleOperation(buttonValue) : null;
+    ['+', '-', '*', '÷', '.'].includes(buttonValue) ? handleOperation(buttonValue) : null;
     buttonValue === '=' ? performOperation() : null;
     !isNaN(buttonValue) ? inputNumber(buttonValue) : null;
     updateDisplay();
