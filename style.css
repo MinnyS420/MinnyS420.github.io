@@ -93,7 +93,13 @@ ul {
     background-image: url("./assets/img/weatherApp.png");
     background-size: 100%;
 }
+
 #apiBackgImg {
     background-image: url("./assets/img/API.png");
+    background-size: 100%;
+}
+
+#ticTacToeImg {
+    background-image: url("./assets/img/tictactoe.png");
     background-size: 100%;
 }
