@@ -103,3 +103,7 @@ ul {
     background-image: url("./assets/img/tictactoe.png");
     background-size: 100%;
 }
+#myFoodBackgImg {
+    background-image: url("./assets/img/myfood.png");
+    background-size: 100%;
+}
