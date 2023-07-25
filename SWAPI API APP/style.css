@@ -1,37 +1,119 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5;
 }
 
 #headerID {
     font-size: 5rem;
     display: flex;
     justify-content: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
 }
 
 #main {
     text-align: center;
-    padding-top: 1rem;
-    overflow-wrap: break-word;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.cardBtn {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cardBtn:hover {
+    background-color: #f5f5f5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
 
 ul li {
     text-align: left;
     font-size: large;
+    padding: 0.5rem;
+    border-top: 1px solid #ccc;
 }
 
-.cardBtn {
-    border: 2px solid black;
-    border-radius: 35px;
-    width: 10%;
-    height: 50px;
-    margin: 8px;
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-#cardContainer,
-#cardBtn {
-    display: flexbox;
-    border: 1px solid black;
-    border-radius: 25px;
-    padding: 10px;
-    margin: 5px;
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    word-wrap: break-word; /* Add this property to allow text wrapping */
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.modal-close {
+    cursor: pointer;
 }

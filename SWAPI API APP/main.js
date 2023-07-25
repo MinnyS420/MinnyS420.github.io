@@ -32,24 +32,57 @@ async function fetchAndRenderData(endpoint, parentElem) {
 
   const elements = data.results;
   elements.forEach(element => {
+    const card = document.createElement('div'); // Create a card container
+    card.classList.add('card'); // Add the card class
+
     const cardBtn = document.createElement('button');
     cardBtn.setAttribute('class', 'cardBtn');
     cardBtn.setAttribute('data-url', element.url);
     cardBtn.textContent = element.name || element.title;
     cardBtn.addEventListener('click', async () => {
+
       const detailResponse = await fetch(element.url);
       const detailData = await detailResponse.json();
-      const info = document.createElement('ul');
+      
+      // Create a modal for displaying film details
+      const modal = document.createElement('div');
+      modal.classList.add('modal');
+
+      const modalContent = document.createElement('div');
+      modalContent.classList.add('modal-content');
+
+      const modalHeader = document.createElement('div');
+      modalHeader.classList.add('modal-header');
+
+      const filmTitle = document.createElement('h2');
+      filmTitle.textContent = element.title || element.name;
+      modalHeader.appendChild(filmTitle);
+
+      const modalClose = document.createElement('span');
+      modalClose.classList.add('modal-close');
+      modalClose.textContent = 'X';
+      modalClose.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+      modalHeader.appendChild(modalClose);
+
+      const infoList = document.createElement('ul');
       for (const [key, value] of Object.entries(detailData)) {
         const listItem = document.createElement('li');
         listItem.textContent = `${key}: ${value}`;
-        info.appendChild(listItem);
+        infoList.appendChild(listItem);
       }
-      mainDiv.innerHTML = '';
-      mainDiv.innerHTML = `<h1>${element.title||element.name}</h1>`;
-      mainDiv.appendChild(info);
+
+      modalContent.appendChild(modalHeader);
+      modalContent.appendChild(infoList);
+      modal.appendChild(modalContent);
+      document.body.appendChild(modal);
+
+      modal.style.display = 'block';
     });
-    parentElem.appendChild(cardBtn);
+
+    card.appendChild(cardBtn); // Add the button to the card container
+    parentElem.appendChild(card); // Add the card container to the main div
   });
 }
 
