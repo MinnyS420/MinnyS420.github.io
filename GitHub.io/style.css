@@ -9,7 +9,7 @@
 #footer {
     width: 100%;
     height: 10rem;
-    background-image: url(/assets/img/binary_code.gif);
+    background-image: url(../assets/img/binary_code.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 40%;
@@ -26,7 +26,7 @@
 
 #mainDiv {
     background-color: rgba(255, 255, 255, 0.67);
-    width: 90%;
+    width: 200%;
     height: 97.5%;
     display: flex;
     align-items: stretch;
@@ -43,7 +43,7 @@ ul {
 }
 
 #allInOne {
-    background-image: url(./assets/img/backgroundimg.jpg);
+    background-image: url(../assets/img/backgroundimg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 70%;
@@ -81,31 +81,34 @@ ul {
     background-attachment: fixed;
 }
 
-#cvBackgImg {
-    background-image: url("./assets/img/CVimg.png");
-    background-size: 100%;
-}
-
 #calculatorBackgImg {
-    background-image: url("./assets/img/calculator.png");
+    background-image: url("../assets/img/calculator.png");
     background-size: 100%;
 }
 
 #weatherBackgImg {
-    background-image: url("./assets/img/weatherApp.png");
+    background-image: url("../assets/img/weatherApp.png");
     background-size: 100%;
 }
 
 #apiBackgImg {
-    background-image: url("./assets/img/API.png");
+    background-image: url("../assets/img/API.png");
     background-size: 100%;
 }
 
 #ticTacToeImg {
-    background-image: url("./assets/img/tictactoe.png");
+    background-image: url("../assets/img/tictactoe.png");
     background-size: 100%;
 }
 #myFoodBackgImg {
-    background-image: url("./assets/img/myfood.png");
+    background-image: url("../assets/img/myfood.png");
+    background-size: 100%;
+}
+#sourceCodeBackgImg {
+    background-image: url("../assets/img/SourceCodeImg.png");
+    background-size: 100%;
+}
+#burgerAppBackgImg {
+    background-image: url("../assets/img/BurgerAppImg.png");
     background-size: 100%;
 }
