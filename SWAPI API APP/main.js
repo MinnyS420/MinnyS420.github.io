@@ -123,3 +123,14 @@ vehiclesBtn.addEventListener('click', () => {
   const endpoint = url + 'vehicles';
   fetchAndRenderData(endpoint, mainDiv);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get a reference to the "Back to menu" button
+  const backToMenuBtn = document.getElementById("backToMenuBtn");
+
+  // Add a click event listener to the button
+  backToMenuBtn.addEventListener("click", function() {
+      // Reload the page to refresh the content
+      location.reload();
+  });
+});
