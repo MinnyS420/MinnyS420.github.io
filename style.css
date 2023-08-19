@@ -87,13 +87,13 @@
     background-image: -webkit-linear-gradient(#00abf0,#00abf0);
     background-repeat: no-repeat;
     -webkit-background-clip: text;
-    background-position: -350px 0%;
+    background-position: -490px 0%;
     animation: animateText 6s linear infinite;
 }
 
 @keyframes animateText {
     0%,95%,100% {
-        background-position: -350px 0;
+        background-position: -490px 0;
     }
     65%,85% {
         background-position: 0 0;
