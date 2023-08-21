@@ -328,16 +328,19 @@
     }
 }
 
-@media screen and (min-width: 920px) and (max-width: 1160px) {
+@media screen and (min-width: 920px) and (max-width: 1199px) {
 
     /* Adjust styles for 920p screens here */
+    .home-content {
+        max-width: 60%;
+    }
     .home-image {
-        width: 20rem;
-        height: 20rem;
+        width: 286px;
+        height: 286px;
     }
 }
 
-@media screen and (min-width: 1161px) and (max-width: 1389px) {
+@media screen and (min-width: 1200px) and (max-width: 1389px) {
 
     /* Adjust styles for 920p screens here */
     .home-image {
