@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200,300,400,500,600,700,800,900&display=swap');
 
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,8 +8,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body
-{
+body {
     background: #124151;
     display: flex;
     justify-content: center;
@@ -18,8 +16,7 @@ body
     min-height: 100vh;
 }
 
-.container
-{
+.container {
     position: relative;
     width: 100%;
     max-width: 1000px;
@@ -28,28 +25,25 @@ body
     margin: 50px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
 }
 
-.container .left_Side
-{
+.container .left_Side {
     position: relative;
     background: #003147;
     padding: 40px;
 }
 
-.profileText
-{
+.profileText {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.profileText .imgBx
-{
+.profileText .imgBx {
     position: relative;
     width: 200px;
     height: 200px;
@@ -57,8 +51,7 @@ body
     overflow: hidden;
 }
 
-.profileText .imgBx img
-{
+.profileText .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -67,8 +60,7 @@ body
     object-fit: cover;
 }
 
-.profileText h2
-{
+.profileText h2 {
     color: #fff;
     font-size: 1.5em;
     margin-top: 20px;
@@ -78,19 +70,16 @@ body
     line-height: 1.4em;
 }
 
-.profileText span
-{
+.profileText span {
     font-size: 0.8em;
     font-weight: 300;
 }
 
-.contactInfo
-{
+.contactInfo {
     padding-top: 40px;
 }
 
-.title
-{
+.title {
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
@@ -98,21 +87,18 @@ body
     margin-bottom: 20px;
 }
 
-.contactInfo ul
-{
+.contactInfo ul {
     position: relative;
 }
 
-.contactInfo ul li
-{
+.contactInfo ul li {
     position: relative;
     list-style: none;
     margin: 10px 0;
     cursor: pointer;
 }
 
-.contactInfo ul li .icon
-{
+.contactInfo ul li .icon {
     display: inline-block;
     width: 30px;
     font-size: 18px;
@@ -120,39 +106,33 @@ body
 }
 
 .contactInfo ul li a,
-.contactInfo ul li span
-{
+.contactInfo ul li span {
     color: #fff;
     font-weight: 300;
     text-decoration: none;
 }
 
-.contactInfo.education li
-{
+.contactInfo.education li {
     margin-bottom: 15px;
 }
 
-.contactInfo.education h5
-{
+.contactInfo.education h5 {
     color: #03a9f4;
     padding-bottom: 12px;
     font-weight: 500;
 }
 
-.contactInfo.education h4:nth-child(2)
-{
+.contactInfo.education h4:nth-child(2) {
     color: #fff;
     font-weight: 600;
 }
 
-.contactInfo.education h4
-{
+.contactInfo.education h4 {
     color: #fff;
     font-weight: 300;
 }
 
-.contactInfo.language .percent
-{
+.contactInfo.language .percent {
     position: relative;
     width: 100%;
     height: 6px;
@@ -161,8 +141,7 @@ body
     margin-top: 5px;
 }
 
-.contactInfo.language .percent div
-{
+.contactInfo.language .percent div {
     position: absolute;
     top: 0;
     left: 0;
@@ -170,65 +149,55 @@ body
     background: #03a9f4;
 }
 
-.container .right_Side
-{
+.container .right_Side {
     position: relative;
     background: #fff;
     padding: 40px;
 }
 
-.about
-{
+.about {
     margin-bottom: 50px;
 }
 
-.about:last-child
-{
+.about:last-child {
     margin-bottom: 0;
 }
 
-.title2
-{
+.title2 {
     color: #003147;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
-p
-{
+p {
     color: #333;
 }
 
-.about .box
-{
+.about .box {
     display: flex;
     flex-direction: row;
     margin: 20px 0;
 }
 
-.about .box .year_company
-{
+.about .box .year_company {
     min-width: 150px;
 }
 
-.about .box .year_company h5
-{
+.about .box .year_company h5 {
     text-transform: uppercase;
     color: #848c90;
     font-weight: 600;
     margin-bottom: 8px;
 }
 
-.about .box .text h4
-{
+.about .box .text h4 {
     text-transform: uppercase;
     color: #2a7da2;
     font-size: 16px;
 }
 
-.skills .box
-{
+.skills .box {
     position: relative;
     width: 100%;
     display: grid;
@@ -237,23 +206,20 @@ p
     align-items: center;
 }
 
-.skills .box h4
-{
+.skills .box h4 {
     text-transform: uppercase;
     color: #848c99;
     font-weight: 500;
 }
 
-.skills .box .percent
-{
+.skills .box .percent {
     position: relative;
     width: 100%;
     height: 10px;
     background: #f0f0f0;
 }
 
-.skills .box .percent div
-{
+.skills .box .percent div {
     position: absolute;
     top: 0;
     left: 0;
@@ -261,13 +227,11 @@ p
     background: #03a9f4;
 }
 
-.hobbies ul
-{
+.hobbies ul {
     list-style: none;
 }
 
-.hobbies ul li
-{
+.hobbies ul li {
     color: #333;
     list-style: none;
     text-transform: uppercase;
@@ -275,8 +239,22 @@ p
     margin: 12px 0 12px 0;
 }
 
-.hobbies ul li .fa
-{
+.hobbies ul li .fa {
     color: #03a9f4;
     font-size: 18px;
+}
+
+@media screen and (min-width: 392px) and (max-width: 1199px) {
+
+    .container .left_Side {
+        font-size: 12px;
+    }
+
+    .about .box {
+        display: block;
+    }
+
+    .about.skills .box {
+        display: block;
+    }
 }
