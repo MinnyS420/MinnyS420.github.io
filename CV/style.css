@@ -244,10 +244,9 @@ p {
     font-size: 18px;
 }
 
-@media screen and (min-width: 392px) and (max-width: 1199px) {
-
-    .container .left_Side {
-        font-size: 12px;
+@media screen and (max-width: 998px) {
+    .container{
+        display: block;
     }
 
     .about .box {
@@ -256,5 +255,10 @@ p {
 
     .about.skills .box {
         display: block;
+    }
+}
+@media screen and (max-width: 1094px){
+    .container .left_Side {
+        font-size: 12px;
     }
 }
