@@ -76,7 +76,7 @@ body {
 }
 
 .contactInfo {
-    padding-top: 40px;
+    padding-top: px;
     font-size: 14px;
 }
 
@@ -95,7 +95,7 @@ body {
 .contactInfo ul li {
     position: relative;
     list-style: none;
-    margin: 10px 0;
+    margin: 5px 0;
     cursor: pointer;
 }
 
@@ -107,10 +107,13 @@ body {
 }
 
 .contactInfo ul li a,
-.contactInfo ul li span {
+.contactInfo ul li span,
+.contactInfo_language ul li {
     color: #fff;
     font-weight: 300;
     text-decoration: none;
+    list-style: none;
+
 }
 
 .contactInfo.education li {
@@ -133,16 +136,16 @@ body {
     font-weight: 300;
 }
 
-.contactInfo.language .percent {
+.contactInfo_language .percent {
     position: relative;
     width: 100%;
     height: 6px;
     background: #081921;
     display: block;
-    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-.contactInfo.language .percent div {
+.contactInfo_language .percent div {
     position: absolute;
     top: 0;
     left: 0;
