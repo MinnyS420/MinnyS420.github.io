@@ -1,12 +1,76 @@
-# React + Vite
+/******\******* ✨ Windsurf Command ⭐ ******\*******/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Weather App 2.0
 
-Currently, two official plugins are available:
+This is a weather application built using the OpenWeather API. It provides current weather information for various locations using a modern web interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Display current weather conditions
+- Search for weather by city
+- Responsive design using Tailwind CSS
+- Built with React and Vite for fast development and performance
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/weather_app_2.0.git
+   cd weather_app_2.0
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Obtain an API key from [OpenWeather](https://openweathermap.org/api) and update your environment variables or configuration file with the key.
+
+## Usage
+
+### Development Server
+
+To start the development server, run:
+
+```bash
+npm run dev
+```
+
+This will start the Vite development server, and you can view the app at `http://localhost:3000`.
+
+### Build
+
+To build the app for production, run:
+
+```bash
+npm run build
+```
+
+### Preview
+
+To preview the production build locally, run:
+
+```bash
+npm run preview
+```
+
+## Linting
+
+To lint your code, run:
+
+```bash
+npm run lint
+```
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces
+- **Vite**: A fast build tool and development server
+- **Tailwind CSS**: A utility-first CSS framework
+- **Axios**: A promise-based HTTP client for the browser and Node.js
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
